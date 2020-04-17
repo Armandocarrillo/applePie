@@ -9,12 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var treeImage: UIImageView!
+    @IBOutlet var correctWordLabel: UILabel!
+    @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet var letterButtons: [UIButton]! // outlet collection
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        sender.isEnabled = false
+    }
+    
 }
 
